@@ -107,7 +107,6 @@ func dfsForSliceFile(hight int, node File, store KVStore, seedId int, h hash.Has
 
 // sliceFile 函数用于切分文件并创建 MerkleDAG 对象
 func sliceFile(node File, store KVStore, h hash.Hash) *Object {
-	// fmt.Println("222222")
 	if len(node.Bytes()) <= 256*1024 {
 		data := node.Bytes()
 		blob := Object{
